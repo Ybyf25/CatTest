@@ -64,31 +64,41 @@ main {
 
 /* === Навигация между историями === */
 .navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  text-align: center;
   position: relative;
-  max-width: 700px;
-  margin: 40px auto 0;
-  height: 40px;
 }
-.nav-left, .nav-center, .nav-right {
-  position: absolute;
-  top: 0;
+
+.nav-left, .nav-right {
+  flex: 1;
   font-weight: bold;
   text-decoration: none;
   color: #6b4f3f;
 }
-/* Левая ссылка */
+
 .nav-left {
-  left: 0;
+  text-align: left;
 }
-/* Центральная ссылка */
-.nav-center {
-  left: 50%;
-  transform: translateX(-50%);
-}
-/* Правая ссылка */
+
 .nav-right {
-  right: 0;
+  text-align: right;
 }
+
+/* Главная — ниже */
+.nav-home {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.nav-home a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #6b4f3f;
+  font-size: 1.1em;
+}
+
 
 
 /* === Адаптация для мобильных устройств === */

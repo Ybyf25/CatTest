@@ -26,12 +26,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.body.classList.add("page");
 
-  // Случайное размещение кнопки "Мяу!"
+  // Случайное размещение кнопки "Мяу!" строго под рамкой
   if (meowButton) {
-    const x = Math.floor(Math.random() * (window.innerWidth - 100));
-    const y = Math.floor(Math.random() * (window.innerHeight - 50));
-    meowButton.style.left = `${x}px`;
-    meowButton.style.top = `${y}px`;
+    const main = document.querySelector("main");
+
+    if (main) {
+      const mainRect = main.getBoundingClientRect();
+      const x = Math.floor(Math.random() * (window.innerWidth - 120)); // случайная ширина
+      const y = window.scrollY + mainRect.bottom + 20; // строго под рамкой
+
+      meowButton.style.position = "absolute";
+      meowButton.style.left = `${x}px`;
+      meowButton.style.top = `${y}px`;
+    }
 
     meowButton.addEventListener("click", () => {
       if (meowSound) {
