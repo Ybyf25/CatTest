@@ -70,26 +70,17 @@ main {
   text-align: center;
   position: relative;
 }
-
 .nav-left, .nav-right {
   flex: 1;
   font-weight: bold;
   text-decoration: none;
   color: #6b4f3f;
 }
-
 .nav-left {
   text-align: left;
 }
-
 .nav-right {
   text-align: right;
-}
-
-/* Главная — ниже */
-.nav-home {
-  text-align: center;
-  margin-top: 30px;
 }
 
 .nav-home a {
@@ -98,6 +89,11 @@ main {
   color: #6b4f3f;
   font-size: 1.1em;
 }
+.nav-home {
+  text-align: center;
+  margin-top: 30px;
+}
+
 
 
 
@@ -167,3 +163,4 @@ main {
 #meowButton:hover {
   transform: scale(1.1);
 }
+
